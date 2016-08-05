@@ -58,7 +58,7 @@ class Note: NSManagedObject {
     
     class func createNoteWith(title: String?, note: String?, flag: Int?, inManagedObjectContext managedObjectContext: NSManagedObjectContext?) -> Note? {
         guard let context = managedObjectContext else { return nil }
-        if let note = (try? NSEntityDescription.insertNewObjectForEntityForName(Names.EntityName, inManagedObjectContext: context)) as? Note {
+        if let note = NSEntityDescription.insertNewObjectForEntityForName(Names.EntityName, inManagedObjectContext: context) as? Note {
             note.id = NSUUID().UUIDString                                       // Create a unique ID
             note.titleText = title                                              // Sets title text regardless of whether it can be unwrapped or not
             if let flagValue = flag {
