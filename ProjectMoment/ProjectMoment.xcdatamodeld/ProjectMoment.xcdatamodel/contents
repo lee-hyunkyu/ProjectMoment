@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Automatic">
-    <entity name="Location" syncable="YES">
+    <entity name="Location" representedClassName=".Location" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Note" syncable="YES">
+    <entity name="Note" representedClassName=".Note" syncable="YES">
         <attribute name="flag" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="locationID" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,7 +17,7 @@
         <attribute name="titleText" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="parentNotebook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" inverseName="subnotes" inverseEntity="Notebook" syncable="YES"/>
     </entity>
-    <entity name="Notebook" syncable="YES">
+    <entity name="Notebook" representedClassName=".Notebook" syncable="YES">
         <attribute name="colorBlue" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="colorGreen" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="colorRed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
