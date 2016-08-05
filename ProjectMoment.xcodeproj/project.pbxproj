@@ -13,6 +13,8 @@
 		477011D51D5536B500529563 /* ProjectMoment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 477011D31D5536B500529563 /* ProjectMoment.xcdatamodeld */; };
 		477011D71D5536B500529563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477011D61D5536B500529563 /* Assets.xcassets */; };
 		477011DA1D5536B500529563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477011D81D5536B500529563 /* LaunchScreen.storyboard */; };
+		47A2ABFB1D5557C6004441E0 /* NotebookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2ABFA1D5557C6004441E0 /* NotebookTableViewCell.swift */; };
+		47A2ABFD1D5557CE004441E0 /* NotebookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2ABFC1D5557CE004441E0 /* NotebookTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		477011D61D5536B500529563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		477011D91D5536B500529563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		477011DB1D5536B500529563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47A2ABFA1D5557C6004441E0 /* NotebookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookTableViewCell.swift; sourceTree = "<group>"; };
+		47A2ABFC1D5557CE004441E0 /* NotebookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				477011E11D5536D200529563 /* Supporting Files */,
+				47A2ABFA1D5557C6004441E0 /* NotebookTableViewCell.swift */,
+				47A2ABFC1D5557CE004441E0 /* NotebookTableViewController.swift */,
 				477011CC1D5536B500529563 /* AppDelegate.swift */,
 				477011CE1D5536B500529563 /* ViewController.swift */,
 				477011DB1D5536B500529563 /* Info.plist */,
@@ -149,6 +155,8 @@
 			files = (
 				477011CF1D5536B500529563 /* ViewController.swift in Sources */,
 				477011CD1D5536B500529563 /* AppDelegate.swift in Sources */,
+				47A2ABFD1D5557CE004441E0 /* NotebookTableViewController.swift in Sources */,
+				47A2ABFB1D5557C6004441E0 /* NotebookTableViewCell.swift in Sources */,
 				477011D51D5536B500529563 /* ProjectMoment.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +309,7 @@
 				477011E01D5536B500529563 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
