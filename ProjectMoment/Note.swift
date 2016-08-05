@@ -34,7 +34,7 @@ class Note: NSManagedObject {
         static let High: (Float, Float, Float, Float) = (0.0, 0.0, 0.0, 0.0)
     }
     
-    private lazy var defaultFlags: [Int: Flag] = {
+    static private let defaultFlags: [Int: Flag] = {
         var defaultFlags = [Int:Flag]()
         
         // Set Low
@@ -56,7 +56,24 @@ class Note: NSManagedObject {
     }()
     
     
-    
+    class func createNoteWith(title: String?, note: String?, flag: Int?, inManagedObjectContext managedObjectContext: NSManagedObjectContext?) -> Note? {
+        guard let context = managedObjectContext else { return nil }
+        if let note = (try? NSEntityDescription.insertNewObjectForEntityForName(Names.EntityName, inManagedObjectContext: context)) as? Note {
+            note.id = NSUUID().UUIDString                                       // Create a unique ID
+            note.titleText = title                                              // Sets title text regardless of whether it can be unwrapped or not
+            if let flagValue = flag {
+                if flagValue > defaultFlags.count || flagValue < 0 {
+                    note.flag = 0
+                }
+            }else {
+                note.flag = flag
+            }
+            note.time = NSDate()
+            // Todo - Add Location Ability
+        }
+        
+        return nil
+    }
     
     
 }
