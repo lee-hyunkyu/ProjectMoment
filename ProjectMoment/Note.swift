@@ -25,5 +25,15 @@ class Note: NSManagedObject {
         case High(Int, UIColor)
     }
     
+    // Default Flag Color as (Red, Green, Blue, Alpha)
+    struct DefaultFlagColor {
+        static let Low = (0, 0, 0, 0)
+        static let Medium_Low = (0, 0, 0, 0)
+        static let Medium = (0, 0, 0, 0)
+        static let Medium_High = (0, 0, 0, 0)
+        static let High = (0, 0, 0, 0)
+    }
+    
+    
     
 }
