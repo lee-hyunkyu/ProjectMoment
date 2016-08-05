@@ -13,7 +13,7 @@
         <attribute name="locationID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="noteText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photoID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="titleText" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="parentNotebook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" inverseName="subnotes" inverseEntity="Notebook" syncable="YES"/>
     </entity>
@@ -53,8 +53,8 @@
         <relationship name="subnotes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="parentNotebook" inverseEntity="Note" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Notebook" positionX="-63" positionY="-18" width="128" height="540"/>
-        <element name="Note" positionX="-54" positionY="-9" width="128" height="165"/>
         <element name="Location" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="Note" positionX="-54" positionY="-9" width="128" height="165"/>
+        <element name="Notebook" positionX="-63" positionY="-18" width="128" height="540"/>
     </elements>
 </model>

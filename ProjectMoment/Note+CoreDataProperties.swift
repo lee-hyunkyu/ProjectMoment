@@ -14,13 +14,13 @@ import CoreData
 
 extension Note {
 
-    @NSManaged var id: String?
     @NSManaged var flag: NSNumber?
-    @NSManaged var time: String?
+    @NSManaged var id: String?
     @NSManaged var locationID: String?
-    @NSManaged var titleText: String?
     @NSManaged var noteText: String?
     @NSManaged var photoID: String?
+    @NSManaged var time: NSDate?
+    @NSManaged var titleText: String?
     @NSManaged var parentNotebook: Notebook?
 
 }
