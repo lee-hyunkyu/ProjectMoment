@@ -56,15 +56,23 @@
 		477011CB1D5536B500529563 /* ProjectMoment */ = {
 			isa = PBXGroup;
 			children = (
+				477011E11D5536D200529563 /* Supporting Files */,
 				477011CC1D5536B500529563 /* AppDelegate.swift */,
 				477011CE1D5536B500529563 /* ViewController.swift */,
-				477011D01D5536B500529563 /* Main.storyboard */,
-				477011D61D5536B500529563 /* Assets.xcassets */,
-				477011D81D5536B500529563 /* LaunchScreen.storyboard */,
 				477011DB1D5536B500529563 /* Info.plist */,
 				477011D31D5536B500529563 /* ProjectMoment.xcdatamodeld */,
 			);
 			path = ProjectMoment;
+			sourceTree = "<group>";
+		};
+		477011E11D5536D200529563 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				477011D01D5536B500529563 /* Main.storyboard */,
+				477011D61D5536B500529563 /* Assets.xcassets */,
+				477011D81D5536B500529563 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
