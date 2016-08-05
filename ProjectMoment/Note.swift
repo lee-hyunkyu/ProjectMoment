@@ -8,10 +8,22 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 class Note: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+    
+    struct Names {
+        static let EntityName = "Note"
+    }
+    
+    enum Flag {
+        case Low(Int, UIColor)
+        case Medium_Low(Int, UIColor)
+        case Medium(Int, UIColor)
+        case Medium_High(Int, UIColor)
+        case High(Int, UIColor)
+    }
+    
+    
 }
