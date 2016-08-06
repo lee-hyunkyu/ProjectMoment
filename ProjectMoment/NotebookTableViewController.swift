@@ -23,6 +23,7 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         tableView?.delegate = self
         tableView?.dataSource = self
         self.view = tableView
+        updateNavigationBar()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +32,7 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     
+    // MARK: - Table View Data Source
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(Cells.Notebook)
@@ -47,6 +49,19 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
+    }
+    
+    // MARK: - UI
+    
+    let settingsButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks, target: nil, action: nil)    // TODO - set target/action
+    let searchButton    = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
+    let filterButton    = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
+    let moreButton      = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
+    
+    func updateNavigationBar() {
+        self.navigationItem.leftBarButtonItems = [settingsButton, searchButton]
+        // self.navigaitonItem.title
+        self.navigationItem.rightBarButtonItems = [filterButton, moreButton]
     }
 
 
