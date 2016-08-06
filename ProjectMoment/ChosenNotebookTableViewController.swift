@@ -71,6 +71,14 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
         // Use notebook as model and pass it in when incorporating Core Data later
         cell?.textLabel?.text = "something"
         cell?.detailTextLabel?.text = "detail"
+        print(cell?.textLabel?.attributedText?.size())
+        // Flags
+        let flagFrame = CGRect(x: 0, y: 0, width: 10, height: (cell?.bounds.height)!)
+        let flagView = UIView(frame: flagFrame)
+        flagView.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.1)
+        cell?.contentView.addSubview(flagView)
+        // Time
+        // Location
         // add image view if necessary
         
     }
