@@ -44,7 +44,16 @@ class NewNoteViewController: UIViewController {
         titleTextField = UITextField(frame: titleTextFieldRect)
         titleTextField?.placeholder = "Hello"
         
-        noteTextField = UITextField(frame: CGRect(x: 30, y: 100, width: 100, height: 30))
+        let noteTextOrigin: CGPoint = {
+            let x = self.view.frame.width*0.1
+            let y = (titleTextField?.frame.maxY)! + 8                              // TODO: - Change this arbitrary  number to a variable
+           
+            return CGPoint(x: x, y: y)
+        }()
+        
+        let noteTextFieldRect = CGRect(origin: noteTextOrigin, size: CGSize(width: titleTextField!.frame.width, height: titleTextField!.frame.height))
+        
+        noteTextField = UITextField(frame: noteTextFieldRect)
         noteTextField?.placeholder = "NoteTextField"
         
         self.view.addSubview(titleTextField!)
