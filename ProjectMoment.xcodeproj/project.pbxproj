@@ -13,6 +13,7 @@
 		477011D51D5536B500529563 /* ProjectMoment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 477011D31D5536B500529563 /* ProjectMoment.xcdatamodeld */; };
 		477011D71D5536B500529563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477011D61D5536B500529563 /* Assets.xcassets */; };
 		477011DA1D5536B500529563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477011D81D5536B500529563 /* LaunchScreen.storyboard */; };
+		47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2ABFE1D556314004441E0 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		477011D61D5536B500529563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		477011D91D5536B500529563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		477011DB1D5536B500529563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47A2ABFE1D556314004441E0 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				477011E11D5536D200529563 /* Supporting Files */,
 				477011CC1D5536B500529563 /* AppDelegate.swift */,
+				47A2ABFE1D556314004441E0 /* NavigationViewController.swift */,
 				477011CE1D5536B500529563 /* NotebookTableViewController.swift */,
 				477011DB1D5536B500529563 /* Info.plist */,
 				477011D31D5536B500529563 /* ProjectMoment.xcdatamodeld */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */,
 				477011CF1D5536B500529563 /* NotebookTableViewController.swift in Sources */,
 				477011CD1D5536B500529563 /* AppDelegate.swift in Sources */,
 				477011D51D5536B500529563 /* ProjectMoment.xcdatamodeld in Sources */,
