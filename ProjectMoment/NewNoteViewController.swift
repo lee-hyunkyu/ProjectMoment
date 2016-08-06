@@ -29,11 +29,24 @@ class NewNoteViewController: UIViewController {
     private var noteTextField: UITextField?
     
     private func setTextFields() {
-        self.view.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(1)
-        titleTextField = UITextField(frame: CGRect(x: 30, y: 70, width: 100, height: 30))
+        self.view.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(1) // Otherwise the background is black
+        
+        let navigationBarHeight = self.navigationController?.navigationBar.frame.height
+        
+        let titleTextOrigin: CGPoint = {
+            let x = self.view.frame.width*0.1
+            let y = x + navigationBarHeight!
+            return CGPoint(x: x, y: y)
+        }()
+        
+        let titleTextFieldRect = CGRect(origin: titleTextOrigin, size: CGSize(width: self.view.frame.width*0.8, height: self.view.frame.height*0.1))
+        
+        titleTextField = UITextField(frame: titleTextFieldRect)
         titleTextField?.placeholder = "Hello"
+        
         noteTextField = UITextField(frame: CGRect(x: 30, y: 100, width: 100, height: 30))
         noteTextField?.placeholder = "NoteTextField"
+        
         self.view.addSubview(titleTextField!)
         self.view.addSubview(noteTextField!)
     }

@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let tableVC = window?.rootViewController
-        let navCon = NavigationViewController(rootViewController: tableVC!)
+        let newNote = NewNoteViewController()
+        let navCon = NavigationViewController(rootViewController: newNote)
         window?.rootViewController = navCon
         
         return true
