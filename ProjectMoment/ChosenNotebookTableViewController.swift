@@ -34,6 +34,8 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
     
     // MARK: - Table View Data Source
     
+    var howMany: Int = 5
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(Cells.Note)
         if cell == nil {
@@ -48,7 +50,7 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return howMany
     }
     
 

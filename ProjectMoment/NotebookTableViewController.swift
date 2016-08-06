@@ -51,6 +51,14 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         return 5
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let chosenNotebookVC = ChosenNotebookTableViewController()
+        chosenNotebookVC.howMany = indexPath.row
+        self.showViewController(chosenNotebookVC, sender: tableView.cellForRowAtIndexPath(indexPath))
+        
+        
+    }
+    
     // MARK: - UI
     
     private let settingsButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks, target: nil, action: nil)    // TODO - set target/action
@@ -71,6 +79,10 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         formatter.dateFormat = "MMM d"                                          // http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
         return formatter.stringFromDate(currentDate)
     }
+    
+    // Mark: - Navigation
+    
+    
     
     
 
