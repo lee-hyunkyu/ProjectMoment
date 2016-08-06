@@ -12,7 +12,7 @@ class NewNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextFields()
+        setTextViews()
         updateNavigationBar()
         // Do any additional setup after loading the view.
     }
@@ -25,10 +25,10 @@ class NewNoteViewController: UIViewController {
 
     // MARK: - UI
     
-    private var titleTextField: UITextField?
-    private var noteTextField: UITextField?
+    private var titleTextView: UITextView?
+    private var noteTextView: UITextView?
     
-    private func setTextFields() {
+    private func setTextViews() {
         self.view.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(1) // Otherwise the background is black
         
         let navigationBarHeight = self.navigationController?.navigationBar.frame.height
@@ -39,25 +39,25 @@ class NewNoteViewController: UIViewController {
             return CGPoint(x: x, y: y)
         }()
         
-        let titleTextFieldRect = CGRect(origin: titleTextOrigin, size: CGSize(width: self.view.frame.width*0.8, height: self.view.frame.height*0.1))
+        let titleTextViewRect = CGRect(origin: titleTextOrigin, size: CGSize(width: self.view.frame.width*0.8, height: self.view.frame.height*0.1))
         
-        titleTextField = UITextField(frame: titleTextFieldRect)
-        titleTextField?.placeholder = "Hello"
+        titleTextView = UITextView(frame: titleTextViewRect)
+        titleTextView?.text = "Hello"
         
         let noteTextOrigin: CGPoint = {
             let x = self.view.frame.width*0.1
-            let y = (titleTextField?.frame.maxY)! + 8                              // TODO: - Change this arbitrary  number to a variable
+            let y = (titleTextView?.frame.maxY)! + 8                              // TODO: - Change this arbitrary  number to a variable
            
             return CGPoint(x: x, y: y)
         }()
         
-        let noteTextFieldRect = CGRect(origin: noteTextOrigin, size: CGSize(width: titleTextField!.frame.width, height: titleTextField!.frame.height))
+        let noteTextViewRect = CGRect(origin: noteTextOrigin, size: CGSize(width: titleTextView!.frame.width, height: titleTextView!.frame.height))
         
-        noteTextField = UITextField(frame: noteTextFieldRect)
-        noteTextField?.placeholder = "NoteTextField"
+        noteTextView = UITextView(frame: noteTextViewRect)
+        noteTextView?.text = "NoteTextView"
         
-        self.view.addSubview(titleTextField!)
-        self.view.addSubview(noteTextField!)
+        self.view.addSubview(titleTextView!)
+        self.view.addSubview(noteTextView!)
     }
     
     private var addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: nil, action: nil)
@@ -66,7 +66,7 @@ class NewNoteViewController: UIViewController {
         // set the title of the notebook, default notebook if no notebook selected
         // add more complicated code later
         self.navigationItem.rightBarButtonItem = addButton
-        if titleTextField?.text == nil || noteTextField?.text == nil {          // TODO: - Change the color of the bar button item
+        if titleTextView?.text == nil || noteTextView?.text == nil {          // TODO: - Change the color of the bar button item
             addButton.enabled = false
         } else {
             addButton.enabled = true
