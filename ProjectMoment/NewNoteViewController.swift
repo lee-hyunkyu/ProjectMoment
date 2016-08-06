@@ -13,6 +13,7 @@ class NewNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextFields()
+        updateNavigationBar()
         // Do any additional setup after loading the view.
     }
 
@@ -35,6 +36,19 @@ class NewNoteViewController: UIViewController {
         noteTextField?.placeholder = "NoteTextField"
         self.view.addSubview(titleTextField!)
         self.view.addSubview(noteTextField!)
+    }
+    
+    private var addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: nil, action: nil)
+    
+    private func updateNavigationBar() {
+        // set the title of the notebook, default notebook if no notebook selected
+        // add more complicated code later
+        self.navigationItem.rightBarButtonItem = addButton
+        if titleTextField?.text == nil || noteTextField?.text == nil {          // TODO: - Change the color of the bar button item
+            addButton.enabled = false
+        } else {
+            addButton.enabled = true
+        }
     }
     
 
