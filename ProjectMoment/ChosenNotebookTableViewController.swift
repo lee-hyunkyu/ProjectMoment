@@ -39,9 +39,9 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(Cells.Note)
         if cell == nil {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: Cells.Note)
+            cell = UITableViewCell(style: .Subtitle, reuseIdentifier: Cells.Note)
+            update(cell)
         }
-        cell?.textLabel?.text = "\(indexPath.row)"
         return cell!
     }
     
@@ -65,6 +65,14 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
         self.navigationItem.rightBarButtonItems = [filterButton, moreButton]
         self.title = "\(howMany)"
         // More stuff with notebook, such as color and what not
+    }
+    
+    private func update(cell: UITableViewCell?) {
+        // Use notebook as model and pass it in when incorporating Core Data later
+        cell?.textLabel?.text = "something"
+        cell?.detailTextLabel?.text = "detail"
+        // add image view if necessary
+        
     }
 
 }
