@@ -18,7 +18,7 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView = UITableView(frame: UIScreen.mainScreen().applicationFrame, style: .Plain)
+        tableView = UITableView(frame: UIScreen.mainScreen().bounds, style: .Plain)
         tableView?.autoresizingMask = UIViewAutoresizing.FlexibleHeight
         tableView?.delegate = self
         tableView?.dataSource = self
