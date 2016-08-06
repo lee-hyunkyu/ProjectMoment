@@ -14,6 +14,7 @@
 		477011D71D5536B500529563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477011D61D5536B500529563 /* Assets.xcassets */; };
 		477011DA1D5536B500529563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477011D81D5536B500529563 /* LaunchScreen.storyboard */; };
 		477450A11D568A6B00E9331B /* ChosenNotebookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477450A01D568A6B00E9331B /* ChosenNotebookTableViewController.swift */; };
+		477450A51D56A2DF00E9331B /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477450A41D56A2DF00E9331B /* NewNoteViewController.swift */; };
 		47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2ABFE1D556314004441E0 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		477011D91D5536B500529563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		477011DB1D5536B500529563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		477450A01D568A6B00E9331B /* ChosenNotebookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChosenNotebookTableViewController.swift; sourceTree = "<group>"; };
+		477450A41D56A2DF00E9331B /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		47A2ABFE1D556314004441E0 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				47A2ABFE1D556314004441E0 /* NavigationViewController.swift */,
 				477011CE1D5536B500529563 /* NotebookTableViewController.swift */,
 				477450A01D568A6B00E9331B /* ChosenNotebookTableViewController.swift */,
+				477450A41D56A2DF00E9331B /* NewNoteViewController.swift */,
 				477011DB1D5536B500529563 /* Info.plist */,
 				477011D31D5536B500529563 /* ProjectMoment.xcdatamodeld */,
 			);
@@ -158,6 +161,7 @@
 				477011CD1D5536B500529563 /* AppDelegate.swift in Sources */,
 				477450A11D568A6B00E9331B /* ChosenNotebookTableViewController.swift in Sources */,
 				477011D51D5536B500529563 /* ProjectMoment.xcdatamodeld in Sources */,
+				477450A51D56A2DF00E9331B /* NewNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
