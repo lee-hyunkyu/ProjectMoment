@@ -14,7 +14,7 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         static let Notebook = "Notebook Cell Identifier"
     }
     
-    var tableView: UITableView?
+    private var tableView: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,16 +53,18 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     // MARK: - UI
     
-    let settingsButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks, target: nil, action: nil)    // TODO - set target/action
-    let searchButton    = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
-    let filterButton    = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
-    let moreButton      = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
+    private let settingsButton  = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Bookmarks, target: nil, action: nil)    // TODO - set target/action
+    private let searchButton    = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
+    private let filterButton    = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
+    private let moreButton      = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
     
-    func updateNavigationBar() {
+    private func updateNavigationBar() {
         self.navigationItem.leftBarButtonItems = [settingsButton, searchButton]
         // self.navigaitonItem.title
         self.navigationItem.rightBarButtonItems = [filterButton, moreButton]
     }
+    
+    
 
 
 }
