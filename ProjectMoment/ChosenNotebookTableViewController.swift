@@ -23,7 +23,7 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
         tableView?.delegate = self
         tableView?.autoresizingMask = UIViewAutoresizing.FlexibleHeight
         self.view = tableView
-        
+        updateNavigationBar()
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +34,7 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
     
     // MARK: - Table View Data Source
     
-    var howMany: Int = 5
+    var howMany: Int = 5                                                        // TODO: - Remove in favor of using the Notebook Data Object as the model
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(Cells.Note)
@@ -54,14 +54,17 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - UI
+    
+    private var searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
+    private var moreButton = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
+    private var filterButton = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
+    
+    private func updateNavigationBar() {
+        self.navigationItem.leftBarButtonItems = [searchButton]
+        self.navigationItem.rightBarButtonItems = [filterButton, moreButton]
+        self.title = "\(howMany)"
+        // More stuff with notebook, such as color and what not
     }
-    */
 
 }
