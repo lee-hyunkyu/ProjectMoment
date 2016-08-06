@@ -60,8 +60,16 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     private func updateNavigationBar() {
         self.navigationItem.leftBarButtonItems = [settingsButton, searchButton]
-        // self.navigaitonItem.title
+        self.navigationItem.title = getDate()                                   // Use titleview instead?
         self.navigationItem.rightBarButtonItems = [filterButton, moreButton]
+    }
+    
+    private func getDate() -> String {
+        let currentDate = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        formatter.dateFormat = "MMM d"                                          // http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
+        return formatter.stringFromDate(currentDate)
     }
     
     
