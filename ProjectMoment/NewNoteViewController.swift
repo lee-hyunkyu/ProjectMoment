@@ -33,6 +33,11 @@ class NewNoteViewController: UIViewController {
         
         let navigationBarHeight = self.navigationController?.navigationBar.frame.height
         
+        // Will act as a buffer view to hopefully line up titleTextView and its textInputView
+        let bufferViewRect = CGRect(x: 0, y: 0, width: self.view.frame.width, height: navigationBarHeight!)
+        let bufferView = UIView(frame: bufferViewRect)
+        self.view.addSubview(bufferView)
+        
         let titleTextOrigin: CGPoint = {
             let x = self.view.frame.width*0.1
             let y = x + navigationBarHeight!
