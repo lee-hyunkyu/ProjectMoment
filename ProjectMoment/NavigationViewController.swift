@@ -9,6 +9,10 @@
 import UIKit
 
 class NavigationViewController: UINavigationController {
+    
+    private struct ImageLiterals {
+        static let NavigationItemSettings = "Navigation_Item_Settings.png"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

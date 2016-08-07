@@ -61,10 +61,6 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     // MARK: - UI
     
-    private struct ImageLiterals {
-        static let NavigationItemSettings = "Navigation_Item_Settings.png"
-    }
-    
     private var settingsButton: UIBarButtonItem?
     private var searchButton: UIBarButtonItem?
     private var filterButton: UIBarButtonItem?
@@ -76,11 +72,11 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         settingsIcon.setBackgroundImage(image, forState: .Normal)
         settingsIcon.adjustsImageWhenHighlighted = true
         settingsButton = UIBarButtonItem(customView: settingsIcon)             // TODO - set target/action
-        
+
         searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
         filterButton = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
         moreButton = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
-
+        
         self.navigationItem.leftBarButtonItems = [settingsButton!, searchButton!]
         self.navigationItem.title = getDate()                                   // Use titleview instead?
         self.navigationItem.rightBarButtonItems = [filterButton!, moreButton!]
