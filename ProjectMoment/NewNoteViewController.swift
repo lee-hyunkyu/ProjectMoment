@@ -108,5 +108,54 @@ class NewNoteViewController: UIViewController, UITextViewDelegate {
         view.frame = newFrame
     }
     
-
+    // MARK: - UITextView Delegation
+    
+    // Responding to Editing Notifications
+    
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        return false
+        
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        
+    }
+    
+    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+        return false
+        
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        
+    }
+    
+    // Responding to Text Changes
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        return false
+        
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        
+    }
+    
+    // Responding to Selection Changes
+    
+    func textViewDidChangeSelection(textView: UITextView) {
+        
+    }
+    
+    // Interacting with Text Data 
+    
+    func textView(textView: UITextView, shouldInteractWithTextAttachment textAttachment: NSTextAttachment, inRange characterRange: NSRange) -> Bool {
+        return false
+        
+    }
+    
+    func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
+        return false
+        
+    }
 }
