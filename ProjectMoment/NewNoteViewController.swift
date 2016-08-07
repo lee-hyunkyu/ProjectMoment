@@ -39,10 +39,11 @@ class NewNoteViewController: UIViewController {
             return CGPoint(x: x, y: y)
         }()
         
+        // TODO: - Change the way the placeholder is set, especially the text
         let titleTextViewRect = CGRect(origin: titleTextOrigin, size: CGSize(width: self.view.frame.width*0.8, height: self.view.frame.height*0.1))
-        
         titleTextView = UITextView(frame: titleTextViewRect)
         titleTextView?.text = "Hello"
+        titleTextView?.scrollEnabled = true
         
         let noteTextOrigin: CGPoint = {
             let x = self.view.frame.width*0.1
@@ -54,7 +55,7 @@ class NewNoteViewController: UIViewController {
         let noteTextViewRect = CGRect(origin: noteTextOrigin, size: CGSize(width: titleTextView!.frame.width, height: titleTextView!.frame.height))
         
         noteTextView = UITextView(frame: noteTextViewRect)
-        noteTextView?.text = "NoteTextView"
+        noteTextView?.attributedText = NSAttributedString(string: "Note", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
         
         self.view.addSubview(titleTextView!)
         self.view.addSubview(noteTextView!)
