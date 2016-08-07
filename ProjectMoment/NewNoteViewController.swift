@@ -64,10 +64,14 @@ class NewNoteViewController: UIViewController {
             return CGPoint(x: x, y: y)
         }()
         
-        let noteTextViewRect = CGRect(origin: noteTextOrigin, size: CGSize(width: titleTextView!.frame.width, height: titleTextView!.frame.height))
+        let noteTextViewRect = CGRect(origin: noteTextOrigin, size: CGSize(width: titleTextView!.frame.width, height: 0))
         
         noteTextView = UITextView(frame: noteTextViewRect)
         noteTextView?.attributedText = NSAttributedString(string: "Note", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
+        fixSize(ofTextView: noteTextView!)
+        
+        titleTextView?.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.1)
+        noteTextView?.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.1)
         
         // ================================================================== //
         
