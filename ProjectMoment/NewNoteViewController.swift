@@ -113,7 +113,7 @@ class NewNoteViewController: UIViewController, UITextViewDelegate {
     // Responding to Editing Notifications
     
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
-        return false
+        return true
         
     }
     
@@ -122,7 +122,7 @@ class NewNoteViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewShouldEndEditing(textView: UITextView) -> Bool {
-        return false
+        return true
         
     }
     
@@ -133,7 +133,8 @@ class NewNoteViewController: UIViewController, UITextViewDelegate {
     // Responding to Text Changes
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        return false
+        fixSize(ofTextView: textView)
+        return true
         
     }
     
