@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewNoteViewController: UIViewController {
+class NewNoteViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,16 @@ class NewNoteViewController: UIViewController {
 
     // MARK: - UI
     
-    private var titleTextView: UITextView?
-    private var noteTextView: UITextView?
+    private var titleTextView: UITextView? {
+        didSet {
+            titleTextView?.delegate = self
+        }
+    }
+    private var noteTextView: UITextView? {
+        didSet {
+            noteTextView?.delegate = self
+        }
+    }
     
     private func setTextViews() {
         self.view.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(1) // Otherwise the background is black
