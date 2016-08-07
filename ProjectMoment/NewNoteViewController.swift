@@ -45,10 +45,11 @@ class NewNoteViewController: UIViewController {
         }()
         
         // TODO: - Change the way the placeholder is set, especially the text
-        let titleTextViewRect = CGRect(origin: titleTextOrigin, size: CGSize(width: self.view.frame.width*0.8, height: self.view.frame.height*0.1))
+        let titleTextViewRect = CGRect(origin: titleTextOrigin, size: CGSize(width: self.view.frame.width*0.8, height: 0))
         titleTextView = UITextView(frame: titleTextViewRect)
         titleTextView?.text = "Hello"
-        titleTextView?.scrollEnabled = true
+        titleTextView?.scrollEnabled = false
+        fixSize(ofTextView: titleTextView!)
         
         let noteTextOrigin: CGPoint = {
             let x = self.view.frame.width*0.1
@@ -77,6 +78,14 @@ class NewNoteViewController: UIViewController {
         } else {
             addButton.enabled = true
         }
+    }
+    
+    private func fixSize(ofTextView view: UITextView) {
+        let width = view.frame.size.width
+        let newSize = view.sizeThatFits(CGSize(width: width, height: CGFloat.max))
+        var newFrame = view.frame
+        newFrame.size = CGSize(width: max(newSize.width, width), height: newSize.height)
+        view.frame = newFrame
     }
     
 
