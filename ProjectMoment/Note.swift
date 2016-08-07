@@ -55,7 +55,7 @@ class Note: NSManagedObject {
         return defaultFlags
     }()
     
-    
+    // Location will be current location
     class func createNoteWith(title: String?, note: String?, flag: Int?, inManagedObjectContext managedObjectContext: NSManagedObjectContext?) -> Note? {
         guard let context = managedObjectContext else { return nil }
         if let note = NSEntityDescription.insertNewObjectForEntityForName(Names.EntityName, inManagedObjectContext: context) as? Note {
@@ -70,6 +70,30 @@ class Note: NSManagedObject {
             }
             note.time = NSDate()
             // Todo - Add Location Ability
+            return note
+        }
+        
+        return nil
+    }
+    
+    // Location is given
+    class func createNoteWith(title: String?, note: String?, flag: Int?, location: Location?, inManagedObjectContext managedObjectContext: NSManagedObjectContext?) -> Note? {
+        guard let context = managedObjectContext else { return nil }
+        if let note = NSEntityDescription.insertNewObjectForEntityForName(Names.EntityName, inManagedObjectContext: context) as? Note {
+            note.id = NSUUID().UUIDString                                       // Create a unique ID
+            note.titleText = title                                              // Sets title text regardless of whether it can be unwrapped or not
+            if let flagValue = flag {
+                if flagValue > defaultFlags.count || flagValue < 0 {
+                    note.flag = 0
+                }
+            }else {
+                note.flag = flag
+            }
+            note.time = NSDate()
+            note.locationID = location?.id
+            note.locationAmbiguous = false
+            note.radius = 0
+            return note
         }
         
         return nil
