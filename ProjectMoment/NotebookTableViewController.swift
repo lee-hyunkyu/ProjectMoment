@@ -71,7 +71,12 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     private var moreButton: UIBarButtonItem?
     
     private func updateNavigationBar() {
-		settingsButton = UIBarButtonItem(image: UIImage(imageLiteral: ImageLiterals.NavigationItemSettings), style: .Plain, target: nil, action: nil)    // TODO - set target/action
+		let image = UIImage(imageLiteral: ImageLiterals.NavigationItemSettings)
+        let settingsIcon = UIButton(frame: CGRect(x: 0, y: 0, width: image.size.width/2, height: image.size.height/2)) // TODO - Set the factor to be some calculated value depending on the device
+        settingsIcon.setBackgroundImage(image, forState: .Normal)
+        settingsIcon.adjustsImageWhenHighlighted = true
+        settingsButton = UIBarButtonItem(customView: settingsIcon)             // TODO - set target/action
+        
         searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
         filterButton = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
         moreButton = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
