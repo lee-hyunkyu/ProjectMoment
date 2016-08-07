@@ -67,7 +67,7 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     private var moreButton: UIBarButtonItem?
     
     private func updateNavigationBar() {
-		let image = UIImage(imageLiteral: ImageLiterals.NavigationItemSettings)
+		let image = UIImage(imageLiteral: NavigationViewController.ImageLiterals.NavigationItemSettings)
         let settingsIcon = UIButton(frame: CGRect(x: 0, y: 0, width: image.size.width/2, height: image.size.height/2)) // TODO - Set the factor to be some calculated value depending on the device
         settingsIcon.setBackgroundImage(image, forState: .Normal)
         settingsIcon.adjustsImageWhenHighlighted = true

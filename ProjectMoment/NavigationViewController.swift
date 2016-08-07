@@ -10,7 +10,7 @@ import UIKit
 
 class NavigationViewController: UINavigationController {
     
-    private struct ImageLiterals {
+    struct ImageLiterals {
         static let NavigationItemSettings = "Navigation_Item_Settings.png"
     }
 
