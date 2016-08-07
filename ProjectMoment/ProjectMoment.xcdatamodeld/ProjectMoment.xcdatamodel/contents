@@ -1,4 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Automatic">
+    <entity name="Location" representedClassName=".Location" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Note" representedClassName=".Note" syncable="YES">
+        <attribute name="flag" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationAmbiguous" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="locationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="radius" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="titleText" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parentNotebook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" inverseName="subnotes" inverseEntity="Notebook" syncable="YES"/>
+    </entity>
+    <entity name="Notebook" representedClassName=".Notebook" syncable="YES">
+        <attribute name="colorBlue" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="colorGreen" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="colorRed" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="hasLocation" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hasPerson" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="locationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText7" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText8" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText9" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderText10" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle7" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle8" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle9" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeholderTitle10" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parentNotebook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" inverseName="subnotebooks" inverseEntity="Notebook" syncable="YES"/>
+        <relationship name="subnotebooks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Notebook" inverseName="parentNotebook" inverseEntity="Notebook" syncable="YES"/>
+        <relationship name="subnotes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="parentNotebook" inverseEntity="Note" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Location" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="Note" positionX="-54" positionY="-9" width="128" height="195"/>
+        <element name="Notebook" positionX="-63" positionY="-18" width="128" height="540"/>
+    </elements>
 </model>
