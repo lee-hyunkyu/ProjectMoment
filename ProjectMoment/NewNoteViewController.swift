@@ -108,6 +108,19 @@ class NewNoteViewController: UIViewController, UITextViewDelegate {
         view.frame = newFrame
     }
     
+    private func fixPlacementOfViews() {
+        guard let titleView = titleTextView, let newNoteView = noteTextView else { return }
+        fixSize(ofTextView: titleView)
+        fixSize(ofTextView: newNoteView)
+        let newNoteTextViewOrigin: CGPoint = {
+            let x = newNoteView.frame.origin.x
+            let y = titleView.frame.maxY + 8                                    // TODO: - Change this arbitrary number to a variable
+            return CGPoint(x: x, y: y)
+        }()
+        
+        newNoteView.frame = CGRect(origin: newNoteTextViewOrigin, size: newNoteView.frame.size)
+    }
+    
     // MARK: - UITextView Delegation
     
     // Responding to Editing Notifications
@@ -134,6 +147,7 @@ class NewNoteViewController: UIViewController, UITextViewDelegate {
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         fixSize(ofTextView: textView)
+        fixPlacementOfViews()
         return true
         
     }
