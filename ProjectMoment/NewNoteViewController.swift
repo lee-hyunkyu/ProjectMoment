@@ -38,6 +38,8 @@ class NewNoteViewController: UIViewController {
         let bufferView = UIView(frame: bufferViewRect)
         self.view.addSubview(bufferView)
         
+        // Title Text View Setup
+        
         let titleTextOrigin: CGPoint = {
             let x = self.view.frame.width*0.1
             let y = x + navigationBarHeight!
@@ -51,6 +53,10 @@ class NewNoteViewController: UIViewController {
         titleTextView?.scrollEnabled = false
         fixSize(ofTextView: titleTextView!)
         
+        // ================================================================== //
+        
+        // Note Text View Setup
+        
         let noteTextOrigin: CGPoint = {
             let x = self.view.frame.width*0.1
             let y = (titleTextView?.frame.maxY)! + 8                              // TODO: - Change this arbitrary  number to a variable
@@ -62,6 +68,8 @@ class NewNoteViewController: UIViewController {
         
         noteTextView = UITextView(frame: noteTextViewRect)
         noteTextView?.attributedText = NSAttributedString(string: "Note", attributes: [NSForegroundColorAttributeName: UIColor.grayColor()])
+        
+        // ================================================================== //
         
         self.view.addSubview(titleTextView!)
         self.view.addSubview(noteTextView!)
