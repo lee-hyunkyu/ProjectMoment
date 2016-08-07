@@ -15,6 +15,12 @@
 		477011DA1D5536B500529563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477011D81D5536B500529563 /* LaunchScreen.storyboard */; };
 		477450A11D568A6B00E9331B /* ChosenNotebookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477450A01D568A6B00E9331B /* ChosenNotebookTableViewController.swift */; };
 		477450A51D56A2DF00E9331B /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477450A41D56A2DF00E9331B /* NewNoteViewController.swift */; };
+		479F14131D57E0CB004B7771 /* Notebook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F140D1D57E0CB004B7771 /* Notebook+CoreDataProperties.swift */; };
+		479F14141D57E0CB004B7771 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F140E1D57E0CB004B7771 /* Notebook.swift */; };
+		479F14151D57E0CB004B7771 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F140F1D57E0CB004B7771 /* Location+CoreDataProperties.swift */; };
+		479F14161D57E0CB004B7771 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14101D57E0CB004B7771 /* Location.swift */; };
+		479F14171D57E0CB004B7771 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */; };
+		479F14181D57E0CB004B7771 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14121D57E0CB004B7771 /* Note.swift */; };
 		47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2ABFE1D556314004441E0 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +35,12 @@
 		477011DB1D5536B500529563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		477450A01D568A6B00E9331B /* ChosenNotebookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChosenNotebookTableViewController.swift; sourceTree = "<group>"; };
 		477450A41D56A2DF00E9331B /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		479F140D1D57E0CB004B7771 /* Notebook+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notebook+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		479F140E1D57E0CB004B7771 /* Notebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
+		479F140F1D57E0CB004B7771 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		479F14101D57E0CB004B7771 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		479F14121D57E0CB004B7771 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		47A2ABFE1D556314004441E0 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +74,7 @@
 		477011CB1D5536B500529563 /* ProjectMoment */ = {
 			isa = PBXGroup;
 			children = (
+				479F140C1D57E0B9004B7771 /* Model */,
 				477011E11D5536D200529563 /* Supporting Files */,
 				477011CC1D5536B500529563 /* AppDelegate.swift */,
 				47A2ABFE1D556314004441E0 /* NavigationViewController.swift */,
@@ -69,7 +82,6 @@
 				477450A01D568A6B00E9331B /* ChosenNotebookTableViewController.swift */,
 				477450A41D56A2DF00E9331B /* NewNoteViewController.swift */,
 				477011DB1D5536B500529563 /* Info.plist */,
-				477011D31D5536B500529563 /* ProjectMoment.xcdatamodeld */,
 			);
 			path = ProjectMoment;
 			sourceTree = "<group>";
@@ -82,6 +94,20 @@
 				477011D81D5536B500529563 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		479F140C1D57E0B9004B7771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				479F140D1D57E0CB004B7771 /* Notebook+CoreDataProperties.swift */,
+				479F140F1D57E0CB004B7771 /* Location+CoreDataProperties.swift */,
+				479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */,
+				479F140E1D57E0CB004B7771 /* Notebook.swift */,
+				479F14101D57E0CB004B7771 /* Location.swift */,
+				479F14121D57E0CB004B7771 /* Note.swift */,
+				477011D31D5536B500529563 /* ProjectMoment.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,12 +182,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479F14171D57E0CB004B7771 /* Note+CoreDataProperties.swift in Sources */,
 				47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */,
 				477011CF1D5536B500529563 /* NotebookTableViewController.swift in Sources */,
+				479F14161D57E0CB004B7771 /* Location.swift in Sources */,
+				479F14141D57E0CB004B7771 /* Notebook.swift in Sources */,
 				477011CD1D5536B500529563 /* AppDelegate.swift in Sources */,
 				477450A11D568A6B00E9331B /* ChosenNotebookTableViewController.swift in Sources */,
+				479F14151D57E0CB004B7771 /* Location+CoreDataProperties.swift in Sources */,
+				479F14131D57E0CB004B7771 /* Notebook+CoreDataProperties.swift in Sources */,
 				477011D51D5536B500529563 /* ProjectMoment.xcdatamodeld in Sources */,
 				477450A51D56A2DF00E9331B /* NewNoteViewController.swift in Sources */,
+				479F14181D57E0CB004B7771 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
