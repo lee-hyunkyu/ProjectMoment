@@ -65,15 +65,20 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         static let NavigationItemSettings = "Navigation_Item_Settings.png"
     }
     
-    private let settingsButton      = UIBarButtonItem(image: UIImage(imageLiteral: ImageLiterals.NavigationItemSettings), style: .Plain, target: nil, action: nil)    // TODO - set target/action
-    private let searchButton        = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
-    private let filterButton        = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
-    private let moreButton          = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
+    private var settingsButton: UIBarButtonItem?
+    private var searchButton: UIBarButtonItem?
+    private var filterButton: UIBarButtonItem?
+    private var moreButton: UIBarButtonItem?
     
-    private func updateNavigationBar() {        
-        self.navigationItem.leftBarButtonItems = [settingsButton, searchButton]
+    private func updateNavigationBar() {
+		settingsButton = UIBarButtonItem(image: UIImage(imageLiteral: ImageLiterals.NavigationItemSettings), style: .Plain, target: nil, action: nil)    // TODO - set target/action
+        searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
+        filterButton = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
+        moreButton = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
+
+        self.navigationItem.leftBarButtonItems = [settingsButton!, searchButton!]
         self.navigationItem.title = getDate()                                   // Use titleview instead?
-        self.navigationItem.rightBarButtonItems = [filterButton, moreButton]
+        self.navigationItem.rightBarButtonItems = [filterButton!, moreButton!]
     }
     
     private func getDate() -> String {
