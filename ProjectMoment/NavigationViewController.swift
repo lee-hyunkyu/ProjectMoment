@@ -12,13 +12,13 @@ class NavigationViewController: UINavigationController {
     
     struct ImageLiterals {
         static let NavigationItemSettings = "Navigation_Item_Settings.png"
-        static let NavigationItemSettingsFilled = "Navigation_Item_Settings_Filled"
-        static let NavigationItemCalendar = "Navigation_Item_Calendar"
-        static let NavigationItemCalendarFilled = "Navigation_Item_Calendar_Filled"
-        static let NavigationItemFilter = "Navigation_Item_Filter"
-        static let NavigationItemFilterFilled = "Navigation_Item_Filter_Filled"
-        static let NavigationItemMore = "Navigation_Item_More"
-        static let NavigationItemMoreFilled = "Navigation_Item_More_Filled"
+        static let NavigationItemSettingsFilled = "Navigation_Item_Settings_Filled.png"
+        static let NavigationItemCalendar = "Navigation_Item_Calendar.png"
+        static let NavigationItemCalendarFilled = "Navigation_Item_Calendar_Filled.png"
+        static let NavigationItemFilter = "Navigation_Item_Filter.png"
+        static let NavigationItemFilterFilled = "Navigation_Item_Filter_Filled.png"
+        static let NavigationItemMore = "Navigation_Item_More.png"
+        static let NavigationItemMoreFilled = "Navigation_Item_More_Filled.png"
     }
 
     override func viewDidLoad() {
