@@ -61,8 +61,7 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
     private var filterButton = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
     
     private func updateNavigationBar() {
-        self.navigationItem.leftBarButtonItems = [searchButton]
-        self.navigationItem.rightBarButtonItems = [filterButton, moreButton]
+        self.navigationItem.rightBarButtonItems = [searchButton,filterButton, moreButton]
         self.title = "\(howMany)"
         // More stuff with notebook, such as color and what not
     }
