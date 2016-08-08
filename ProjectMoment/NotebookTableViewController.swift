@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreLocation
 
-class NotebookTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class NotebookTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,
+CLLocationManagerDelegate{
 
     struct Cells {
         static let Notebook = "Notebook Cell Identifier"
@@ -24,6 +26,16 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         tableView?.dataSource = self
         self.view = tableView
         updateNavigationBar()
+        let manager = CLLocationManager()
+        manager.delegate = self
+        print("Ugh")
+        print(CLLocationManager.locationServicesEnabled())
+        if CLLocationManager.locationServicesEnabled() {
+            manager.requestAlwaysAuthorization()
+            
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
