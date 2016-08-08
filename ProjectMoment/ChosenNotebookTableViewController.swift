@@ -59,9 +59,11 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
     private var searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
     private var moreButton = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
     private var filterButton = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
+    private var addNoteButton: UIBarButtonItem!
     
     private func updateNavigationBar() {
-        self.navigationItem.rightBarButtonItems = [searchButton,filterButton, moreButton]
+        addNoteButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(ChosenNotebookTableViewController.showNewNotePage(_:)))
+        self.navigationItem.rightBarButtonItems = [addNoteButton, searchButton, filterButton, moreButton]
         self.title = "\(howMany)"
         // More stuff with notebook, such as color and what not
     }
@@ -79,6 +81,15 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
         // Time
         // Location
         // add image view if necessary
+        
+    }
+    
+    // MARK: - Navigation
+    
+    func showNewNotePage(addNoteButton: UIBarButtonItem) {
+        let newNoteMVC = NewNoteViewController()
+        // Give newNoteMVC some kind of info
+        super.showViewController(newNoteMVC, sender: addNoteButton)
         
     }
 
