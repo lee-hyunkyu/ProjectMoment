@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class NotebookTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
@@ -16,6 +17,8 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     private var tableView: UITableView?
     
+    var manager: CLLocationManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView = UITableView(frame: UIScreen.mainScreen().bounds, style: .Plain)
@@ -24,6 +27,11 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         tableView?.dataSource = self
         self.view = tableView
         updateNavigationBar()
+        
+        // Only ask for authorization when the authorizatino status is not explicitly deniced
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            manager?.requestAlwaysAuthorization()
+        }
     }
 
     override func didReceiveMemoryWarning() {

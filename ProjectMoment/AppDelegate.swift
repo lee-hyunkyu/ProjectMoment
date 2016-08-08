@@ -8,17 +8,23 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    static let manager = CLLocationManager()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let tableVC = window?.rootViewController
         let newNote = NewNoteViewController()
         let navCon = NavigationViewController(rootViewController: tableVC!)
+        if let vc = tableVC as? NotebookTableViewController {
+            vc.manager = AppDelegate.manager
+        }
+        
         window?.rootViewController = navCon
         
         return true
