@@ -22,6 +22,7 @@
 		479F14171D57E0CB004B7771 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */; };
 		479F14181D57E0CB004B7771 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14121D57E0CB004B7771 /* Note.swift */; };
 		47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2ABFE1D556314004441E0 /* NavigationViewController.swift */; };
+		47E8AC861D584BBD001236FC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E8AC851D584BBD001236FC /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		479F14121D57E0CB004B7771 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		47A2ABFE1D556314004441E0 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		47E8AC851D584BBD001236FC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E8AC861D584BBD001236FC /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 		477011C01D5536B500529563 = {
 			isa = PBXGroup;
 			children = (
+				47E8AC851D584BBD001236FC /* CoreLocation.framework */,
 				477011CB1D5536B500529563 /* ProjectMoment */,
 				477011CA1D5536B500529563 /* Products */,
 			);
