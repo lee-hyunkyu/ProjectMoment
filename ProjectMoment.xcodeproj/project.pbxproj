@@ -21,6 +21,7 @@
 		479F14161D57E0CB004B7771 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14101D57E0CB004B7771 /* Location.swift */; };
 		479F14171D57E0CB004B7771 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */; };
 		479F14181D57E0CB004B7771 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14121D57E0CB004B7771 /* Note.swift */; };
+		479F141A1D57E704004B7771 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479F14191D57E704004B7771 /* CoreLocation.framework */; };
 		47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2ABFE1D556314004441E0 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		479F14101D57E0CB004B7771 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		479F14121D57E0CB004B7771 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		479F14191D57E704004B7771 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		47A2ABFE1D556314004441E0 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479F141A1D57E704004B7771 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 		477011C01D5536B500529563 = {
 			isa = PBXGroup;
 			children = (
+				479F14191D57E704004B7771 /* CoreLocation.framework */,
 				477011CB1D5536B500529563 /* ProjectMoment */,
 				477011CA1D5536B500529563 /* Products */,
 			);
