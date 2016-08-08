@@ -69,25 +69,40 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     // MARK: - UI
     
-    private var settingsButton: UIBarButtonItem?
-    private var searchButton: UIBarButtonItem?
-    private var filterButton: UIBarButtonItem?
-    private var moreButton: UIBarButtonItem?
+    private var settingsButton: UIBarButtonItem!
+    private var searchButton: UIBarButtonItem!
+    private var filterButton: UIBarButtonItem!
+    private var moreButton: UIBarButtonItem!
     
     private func updateNavigationBar() {
-		let image = UIImage(imageLiteral: NavigationViewController.ImageLiterals.NavigationItemSettings)
+
+        // Settings Button
+        let image = UIImage(imageLiteral: NavigationViewController.ImageLiterals.NavigationItemSettings)
         let settingsIcon = UIButton(frame: CGRect(x: 0, y: 0, width: image.size.width/2, height: image.size.height/2)) // TODO - Set the factor to be some calculated value depending on the device
         settingsIcon.setBackgroundImage(image, forState: .Normal)
         settingsIcon.adjustsImageWhenHighlighted = true
         settingsButton = UIBarButtonItem(customView: settingsIcon)             // TODO - set target/action
 
-        searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
-        filterButton = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
-        moreButton = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
+        searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)          // TODO: Don't use a system button
         
-        self.navigationItem.leftBarButtonItems = [settingsButton!, searchButton!]
+        // Filter Button
+        // Filter Button
+        let filterImage = UIImage(imageLiteral: NavigationViewController.ImageLiterals.NavigationItemFilter)
+        let filterIcon = UIButton(frame: CGRect(x: 0, y: 0, width: filterImage.size.width/3, height: filterImage.size.height/3)) // TODO: - Remove arbitrary scaling numbers
+        filterIcon.setBackgroundImage(filterImage, forState: .Normal)
+        filterIcon.adjustsImageWhenHighlighted = true
+        filterButton = UIBarButtonItem(customView: filterIcon)
+        
+        // More Button
+        let moreImage = UIImage(imageLiteral: NavigationViewController.ImageLiterals.NavigationItemMore)
+        let moreIcon = UIButton(frame: CGRect(x: 0, y:0, width: moreImage.size.width/3, height: moreImage.size.height/3))
+        moreIcon.setBackgroundImage(moreImage, forState: .Normal)
+        moreIcon.adjustsImageWhenHighlighted = true
+        moreButton = UIBarButtonItem(customView: moreIcon)
+        
+        self.navigationItem.leftBarButtonItems = [settingsButton, searchButton]
         self.navigationItem.title = getDate()                                   // Use titleview instead?
-        self.navigationItem.rightBarButtonItems = [filterButton!, moreButton!]
+        self.navigationItem.rightBarButtonItems = [filterButton, moreButton]
     }
     
     private func getDate() -> String {

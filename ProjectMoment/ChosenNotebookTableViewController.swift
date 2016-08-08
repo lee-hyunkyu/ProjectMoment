@@ -56,13 +56,31 @@ class ChosenNotebookTableViewController: UIViewController, UITableViewDataSource
 
     // MARK: - UI
     
-    private var searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
-    private var moreButton = UIBarButtonItem(title: "…", style: .Plain, target: nil, action: nil)
-    private var filterButton = UIBarButtonItem(title: "Filter", style: .Plain, target: nil, action: nil)
+    private var searchButton: UIBarButtonItem!
+    private var moreButton: UIBarButtonItem!
+    private var filterButton: UIBarButtonItem!
     private var addNoteButton: UIBarButtonItem!
     
     private func updateNavigationBar() {
+        // TODO: - Don't use system items, get an image. They take up way too much space
         addNoteButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(ChosenNotebookTableViewController.showNewNotePage(_:)))
+        
+        searchButton = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
+        
+        // Filter Button
+        let filterImage = UIImage(imageLiteral: NavigationViewController.ImageLiterals.NavigationItemFilter)
+        let filterIcon = UIButton(frame: CGRect(x: 0, y: 0, width: filterImage.size.width/3, height: filterImage.size.height/3)) // TODO: - Remove arbitrary scaling numbers
+        filterIcon.setBackgroundImage(filterImage, forState: .Normal)
+        filterIcon.adjustsImageWhenHighlighted = true
+        filterButton = UIBarButtonItem(customView: filterIcon)
+        
+        // More Button
+        let moreImage = UIImage(imageLiteral: NavigationViewController.ImageLiterals.NavigationItemMore)
+        let moreIcon = UIButton(frame: CGRect(x: 0, y:0, width: moreImage.size.width/3, height: moreImage.size.height/3))
+        moreIcon.setBackgroundImage(moreImage, forState: .Normal)
+        moreIcon.adjustsImageWhenHighlighted = true
+        moreButton = UIBarButtonItem(customView: moreIcon)
+        
         self.navigationItem.rightBarButtonItems = [addNoteButton, searchButton, filterButton, moreButton]
         self.title = "\(howMany)"
         // More stuff with notebook, such as color and what not
