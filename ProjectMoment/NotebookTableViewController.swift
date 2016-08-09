@@ -26,6 +26,10 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         tableView?.delegate = self
         tableView?.dataSource = self
         self.view = tableView
+        
+        // Add Gesture Recognizers
+        self.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(NotebookTableViewController.swypeDown(_:))))
+        
         updateNavigationBar()
         
         // Only ask for authorization when the authorizatino status is not explicitly deniced
@@ -48,6 +52,8 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
             cell = UITableViewCell(style: .Default, reuseIdentifier: Cells.Notebook)
         }
         cell?.textLabel?.text = "\(indexPath.row)"
+        cell?.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(NotebookTableViewController.swypeLeftOnCell(_:))))
+        cell?.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(NotebookTableViewController.swypeRightOnCell(_:))))
         return cell!
     }
     
@@ -111,6 +117,20 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         formatter.dateStyle = NSDateFormatterStyle.ShortStyle
         formatter.dateFormat = "MMM d"                                          // http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns
         return formatter.stringFromDate(currentDate)
+    }
+    
+    // MARK: - Gesture Recognizers
+    
+    func swypeDown(gesture: UIPanGestureRecognizer) {
+        
+    }
+    
+    func swypeLeftOnCell(gesture: UIPanGestureRecognizer) {
+        
+    }
+    
+    func swypeRightOnCell(gesture: UIPanGestureRecognizer) {
+        
     }
     
     // Mark: - Navigation
