@@ -27,9 +27,6 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         tableView?.dataSource = self
         self.view = tableView
         
-        // Add Gesture Recognizers
-        self.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(NotebookTableViewController.swypeDown(_:))))
-        
         updateNavigationBar()
         
         // Only ask for authorization when the authorizatino status is not explicitly deniced
@@ -52,8 +49,12 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
             cell = UITableViewCell(style: .Default, reuseIdentifier: Cells.Notebook)
         }
         cell?.textLabel?.text = "\(indexPath.row)"
-        cell?.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(NotebookTableViewController.swypeLeftOnCell(_:))))
-        cell?.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(NotebookTableViewController.swypeRightOnCell(_:))))
+        let leftPanGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(NotebookTableViewController.swypeLeftOnCell(_:)))
+        leftPanGestureRecognizer.direction = .Left
+        cell?.addGestureRecognizer(leftPanGestureRecognizer)
+        let rightPanGestureRecognizer = UISwipeGestureRecognizer(target: self , action: #selector(NotebookTableViewController.swypeRightOnCell(_:)))
+        rightPanGestureRecognizer.direction = .Right
+        cell?.addGestureRecognizer(rightPanGestureRecognizer)
         return cell!
     }
     
@@ -69,9 +70,9 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         let chosenNotebookVC = ChosenNotebookTableViewController()
         chosenNotebookVC.howMany = indexPath.row
         self.showViewController(chosenNotebookVC, sender: tableView.cellForRowAtIndexPath(indexPath))
-        
-        
     }
+    
+    
     
     // MARK: - UI
     
@@ -121,16 +122,14 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     // MARK: - Gesture Recognizers
     
-    func swypeDown(gesture: UIPanGestureRecognizer) {
-        
-    }
-    
     func swypeLeftOnCell(gesture: UIPanGestureRecognizer) {
-        
+        print("Swype Left On Cell")
+        print((gesture.view as? UITableViewCell)?.textLabel?.text)
     }
     
     func swypeRightOnCell(gesture: UIPanGestureRecognizer) {
-        
+        print("Swype Right On Cell")
+        print((gesture.view as? UITableViewCell)?.textLabel?.text)
     }
     
     // Mark: - Navigation
