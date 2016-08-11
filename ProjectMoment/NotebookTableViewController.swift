@@ -48,7 +48,11 @@ class NotebookTableViewController: UIViewController, UITableViewDelegate, UITabl
         if cell == nil {
             cell = UITableViewCell(style: .Default, reuseIdentifier: Cells.Notebook)
         }
-        cell?.textLabel?.text = "\(indexPath.row)"
+        
+        let notebookCellView = NotebookTableCellView(frame: CGRect(x: 0, y: 0, width: UITableViewAutomaticDimension, height: UITableViewAutomaticDimension))
+        notebookCellView.text = "\(indexPath.row)"
+        notebookCellView.heightOfCell = cell!.frame.height
+        cell?.contentView.addSubview(notebookCellView)
         let leftPanGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(NotebookTableViewController.swypeLeftOnCell(_:)))
         leftPanGestureRecognizer.direction = .Left
         cell?.addGestureRecognizer(leftPanGestureRecognizer)
