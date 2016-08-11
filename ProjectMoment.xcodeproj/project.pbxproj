@@ -22,6 +22,7 @@
 		479F14171D57E0CB004B7771 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */; };
 		479F14181D57E0CB004B7771 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F14121D57E0CB004B7771 /* Note.swift */; };
 		47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2ABFE1D556314004441E0 /* NavigationViewController.swift */; };
+		47B341E11D5D30270077E774 /* NotebookTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B341E01D5D30270077E774 /* NotebookTableCellView.swift */; };
 		47E8AC861D584BBD001236FC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E8AC851D584BBD001236FC /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		479F14111D57E0CB004B7771 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		479F14121D57E0CB004B7771 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		47A2ABFE1D556314004441E0 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		47B341E01D5D30270077E774 /* NotebookTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookTableCellView.swift; sourceTree = "<group>"; };
 		47E8AC851D584BBD001236FC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		477011CB1D5536B500529563 /* ProjectMoment */ = {
 			isa = PBXGroup;
 			children = (
+				47B341E01D5D30270077E774 /* NotebookTableCellView.swift */,
 				479F140C1D57E0B9004B7771 /* Model */,
 				477011E11D5536D200529563 /* Supporting Files */,
 				477011CC1D5536B500529563 /* AppDelegate.swift */,
@@ -189,6 +192,7 @@
 				479F14171D57E0CB004B7771 /* Note+CoreDataProperties.swift in Sources */,
 				47A2ABFF1D556314004441E0 /* NavigationViewController.swift in Sources */,
 				477011CF1D5536B500529563 /* NotebookTableViewController.swift in Sources */,
+				47B341E11D5D30270077E774 /* NotebookTableCellView.swift in Sources */,
 				479F14161D57E0CB004B7771 /* Location.swift in Sources */,
 				479F14141D57E0CB004B7771 /* Notebook.swift in Sources */,
 				477011CD1D5536B500529563 /* AppDelegate.swift in Sources */,
